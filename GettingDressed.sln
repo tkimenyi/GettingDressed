@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingDressed", "GettingDressed\GettingDressed.csproj", "{B583B99F-31A6-40F7-93A8-9D2E429219DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B583B99F-31A6-40F7-93A8-9D2E429219DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B583B99F-31A6-40F7-93A8-9D2E429219DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B583B99F-31A6-40F7-93A8-9D2E429219DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B583B99F-31A6-40F7-93A8-9D2E429219DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1D9EA17-4B17-49C0-8228-662A681B329D}
+	EndGlobalSection
+EndGlobal
