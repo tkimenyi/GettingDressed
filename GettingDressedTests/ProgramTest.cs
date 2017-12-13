@@ -26,7 +26,7 @@ namespace GettingDressedTest
             Assert.AreEqual("fail", Program.ProcessInput("COLD 6"));
 
             //no socks on a HOT day
-            Assert.AreEqual("Removing PJs, shorts, fail", 
+            Assert.AreEqual("Removing PJs, shorts, fail",
                 Program.ProcessInput("HOT 8, 6, 3"));
 
             //can't wear two items of the same type
@@ -39,3 +39,4 @@ namespace GettingDressedTest
         }
     }
 }
+

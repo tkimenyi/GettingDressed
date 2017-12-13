@@ -42,12 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RuleHandler.cs" />
+    <Compile Include="Rules\BeforeLeavingRule.cs" />
     <Compile Include="Clothes.cs" />
+    <Compile Include="Rules\DuplicateItemRule.cs" />
+    <Compile Include="Rules\LeaveHouseLastRule.cs" />
+    <Compile Include="Rules\PantsBeforeFootwearRule.cs" />
+    <Compile Include="Rules\RemovePJRule.cs" />
+    <Compile Include="Rules\Rule.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\ShirtBeforeHeadwearRule.cs" />
+    <Compile Include="Rules\SocksBeforeBootsRule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

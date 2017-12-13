@@ -38,13 +38,7 @@ namespace GettingDressed
             if (key > 8 || key < 1) {
                 return "fail";
             }
-            if (temperature.ToLower().Trim() == "hot")
-            {
-                return _hotClothes[key];
-            }
-            else {
-                return _coldClothes[key];
-            }
+            return temperature.ToLower().Trim() == "hot" ? _hotClothes[key] : _coldClothes[key];
         }
 
     }
