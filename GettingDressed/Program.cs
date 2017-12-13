@@ -12,9 +12,15 @@ namespace GettingDressed
 
         public static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            Console.WriteLine(ProcessInput(input));
-            Console.ReadLine();
+
+            string input;
+            do
+            {
+                Console.WriteLine("Please Enter A New Command; To Exit, Type Exit or Quit");
+                input = Console.ReadLine();
+                string output = (ProcessInput(input));
+                Console.WriteLine(output);
+            } while (input != "Exit" && input != "Quit");
            
         }
         /// <summary>
@@ -24,12 +30,18 @@ namespace GettingDressed
         /// <returns></returns>
         public static string ProcessInput(string input)
         {
+            var failMessage = "Fail. Bad Input";
             if (string.IsNullOrWhiteSpace(input)) {
-                return "Fail. Bad Input";
+                return failMessage;
             }
-            var resultClothes = new List<string>();
             var inputArray = GetInputArray(input);
-            if (Enum.IsDefined(typeof(Temperatures), inputArray?[0]))
+            if (inputArray.Length == 0) {
+                return failMessage;
+            }
+
+            var resultClothes = new List<string>();
+
+            if (Enum.IsDefined(typeof(Temperatures), inputArray[0]))
             {
                 var temperature = inputArray[0];
                 var clothes = new Clothes();
@@ -48,7 +60,7 @@ namespace GettingDressed
 
                 }
             }
-            return resultClothes.Count == 0 ? "Fail. Bad Input" : string.Join(", ", resultClothes);
+            return resultClothes.Count == 0 ? failMessage : string.Join(", ", resultClothes);
 
         }
         /// <summary>
@@ -61,6 +73,7 @@ namespace GettingDressed
         public static string[] GetInputArray(string input)
         {
             char[] delimitChars = { ' ', ',' };
+            input = input.Replace("\"", "").Replace("\'", "");
             string[] inputArrayWithSpaces = input.Split(delimitChars);
             string[] inputArray = inputArrayWithSpaces.Where(c => !string.IsNullOrWhiteSpace(c)).ToArray();
             return inputArray;
