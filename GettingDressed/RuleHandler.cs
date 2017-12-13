@@ -11,8 +11,15 @@ namespace GettingDressed
         // using the chain of responsibiliy design pattern
         // http://www.dofactory.com/net/chain-of-responsibility-design-pattern
 
-
-        public static bool Execute(string[] inputArr, int curIndex, string temperature, List<string> curClothes)
+        /// <summary>
+        /// Execute all the rules; return true if one of them failed
+        /// </summary>
+        /// <param name="inputArr"></param>
+        /// <param name="curIndex"></param>
+        /// <param name="temperature"></param>
+        /// <param name="curClothes"></param>
+        /// <returns></returns>
+        public static bool IsFail(string[] inputArr, int curIndex, string temperature, List<string> curClothes)
         {
             // set up our rules
             var removePjsRule = new RemovePJRule(inputArr, curIndex, temperature, curClothes);

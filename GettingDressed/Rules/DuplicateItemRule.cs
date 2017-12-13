@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GettingDressed
 {
+    /// <summary>
+    /// this rule makes sure the user does not wear the same item twice
+    /// </summary>
     public class DuplicateItemRule : Rule
     {
         public DuplicateItemRule(string[] inputArr, int curIndex, string temperature, List<string> curClothes)

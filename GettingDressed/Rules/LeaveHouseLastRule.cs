@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GettingDressed
 {
+    /// <summary>
+    /// user must leave the house at last
+    /// </summary>
     public class LeaveHouseLastRule : Rule
     {
         public LeaveHouseLastRule(string[] inputArr, int curIndex, string temperature, List<string> curClothes)

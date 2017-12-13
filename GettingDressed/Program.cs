@@ -17,20 +17,26 @@ namespace GettingDressed
             Console.ReadLine();
            
         }
-
+        /// <summary>
+        /// method to process the input 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static string ProcessInput(string input)
         {
-
+            if (string.IsNullOrWhiteSpace(input)) {
+                return "Fail. Bad Input";
+            }
             var resultClothes = new List<string>();
             var inputArray = GetInputArray(input);
-            if (Enum.IsDefined(typeof(Temperatures), inputArray[0]))
+            if (Enum.IsDefined(typeof(Temperatures), inputArray?[0]))
             {
                 var temperature = inputArray[0];
                 var clothes = new Clothes();
                 for (int i = 1; i < inputArray.Length; i++)
                 {
                     var value = int.Parse(inputArray[i]);
-                    var item = RuleHandler.Execute(inputArray, i, temperature, resultClothes) 
+                    var item = RuleHandler.IsFail(inputArray, i, temperature, resultClothes) 
                             ? "fail" 
                             : clothes.GetClothesAt(value, temperature);
                     
@@ -42,7 +48,7 @@ namespace GettingDressed
 
                 }
             }
-            return resultClothes.Count == 0 ? "fail" : string.Join(", ", resultClothes);
+            return resultClothes.Count == 0 ? "Fail. Bad Input" : string.Join(", ", resultClothes);
 
         }
         /// <summary>

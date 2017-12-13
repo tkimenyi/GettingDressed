@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GettingDressed
 {
+    /// <summary>
+    /// you must wear pants/shorts before boots/sandals
+    /// </summary>
     public class PantsBeforeFootwearRule : Rule
     {
         public PantsBeforeFootwearRule(string[] inputArr, int curIndex, string temperature, List<string> curClothes)

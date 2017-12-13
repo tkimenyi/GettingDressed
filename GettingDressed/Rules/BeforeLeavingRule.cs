@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace GettingDressed
 {
+    /// <summary>
+    /// this rule is to make sure the user have put on all items of clothing before leaving the house
+    /// </summary>
     public class BeforeLeavingRule : Rule
     {
+
         public BeforeLeavingRule(string[] inputArr, int curIndex, string temperature, List<string> curClothes)
                     : base(inputArr, curIndex, temperature, curClothes)
         {

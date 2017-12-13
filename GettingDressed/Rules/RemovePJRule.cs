@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GettingDressed
 {
+    /// <summary>
+    /// this rule is to make sure that user removed PJs before wearing putting on anything else
+    /// </summary>
     public class RemovePJRule : Rule
     {
         public RemovePJRule(string[] inputArr, int curIndex, string temperature, List<string> curClothes)

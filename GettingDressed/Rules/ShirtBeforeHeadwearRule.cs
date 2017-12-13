@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace GettingDressed
 {
+    /// <summary>
+    /// you must wear shirt before any jacket/hat/sunglasses
+    /// </summary>
     public class ShirtBeforeHeadwearRule : Rule
     {
         public ShirtBeforeHeadwearRule(string[] inputArr, int curIndex, string temperature, List<string> curClothes)
