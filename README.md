@@ -2,6 +2,8 @@
 
 ## Programming Exercise: Getting Dressed
 
+The solution uses the Chain Of Responsability design pattern. 
+
 ## Code Requirements
  * Visual Studio
  * C#
